@@ -43,14 +43,8 @@ $tgpUpdateChecker = PucFactory::buildUpdateChecker(
     'traffic-growth-projection'
 );
 
-// Optional: Set the branch to check for updates (default is 'main')
+// Set the branch to check for updates
 $tgpUpdateChecker->setBranch('main');
-
-// Authentication for private repository
-// Add this to your wp-config.php: define('TGP_GITHUB_TOKEN', 'your-token-here');
-if (defined('TGP_GITHUB_TOKEN') && TGP_GITHUB_TOKEN) {
-    $tgpUpdateChecker->setAuthentication(TGP_GITHUB_TOKEN);
-}
 
 /**
  * Main plugin class
