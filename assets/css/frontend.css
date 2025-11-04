@@ -1,0 +1,353 @@
+/* Traffic Growth Projection - Frontend Styles */
+/* All styles are scoped to .tgp-frontend-wrapper to avoid theme conflicts */
+
+.tgp-frontend-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+.tgp-frontend-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Error Message */
+.tgp-frontend-error,
+.tgp-block-placeholder {
+    background: #fee;
+    border: 2px solid #d33;
+    border-radius: 8px;
+    padding: 20px;
+    color: #d33;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Header */
+.tgp-frontend-header {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tgp-frontend-title {
+    margin: 0 0 15px 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.tgp-frontend-description {
+    margin: 0;
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Stats Cards */
+.tgp-frontend-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.tgp-frontend-stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tgp-frontend-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tgp-frontend-stat-card.tgp-stat-highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.tgp-stat-highlight .tgp-stat-label,
+.tgp-stat-highlight .tgp-stat-sublabel {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.tgp-stat-highlight .tgp-stat-value {
+    color: white;
+}
+
+.tgp-stat-icon {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.tgp-stat-content {
+    flex: 1;
+}
+
+.tgp-stat-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.tgp-stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.tgp-stat-value.tgp-stat-small {
+    font-size: 20px;
+}
+
+.tgp-stat-sublabel {
+    font-size: 13px;
+    color: #999;
+}
+
+/* Chart Section */
+.tgp-frontend-chart-section {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.tgp-section-title {
+    margin: 0 0 25px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.tgp-chart-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.tgp-filter-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    margin: 0;
+}
+
+.tgp-filter-checkbox input[type="checkbox"] {
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.tgp-filter-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.tgp-filter-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.tgp-frontend-chart-container {
+    position: relative;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+/* ROI Section */
+.tgp-frontend-roi-section {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.tgp-roi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tgp-roi-card {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+}
+
+.tgp-roi-card.tgp-roi-highlight {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    border: none;
+}
+
+.tgp-roi-highlight .tgp-roi-label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.tgp-roi-highlight .tgp-roi-value {
+    color: white;
+}
+
+.tgp-roi-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.tgp-roi-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+/* Keywords Summary */
+.tgp-frontend-keywords-section {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.tgp-keywords-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.tgp-summary-stat {
+    text-align: center;
+}
+
+.tgp-summary-number {
+    display: block;
+    font-size: 48px;
+    font-weight: 700;
+    color: #667eea;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.tgp-summary-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Footer */
+.tgp-frontend-footer {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tgp-frontend-footer p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.tgp-frontend-footer strong {
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tgp-frontend-wrapper {
+        padding: 20px 15px;
+    }
+    
+    .tgp-frontend-header {
+        padding: 30px 20px;
+    }
+    
+    .tgp-frontend-title {
+        font-size: 28px;
+    }
+    
+    .tgp-frontend-description {
+        font-size: 16px;
+    }
+    
+    .tgp-frontend-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .tgp-frontend-chart-section,
+    .tgp-frontend-roi-section,
+    .tgp-frontend-keywords-section {
+        padding: 25px 20px;
+    }
+    
+    .tgp-section-title {
+        font-size: 20px;
+    }
+    
+    .tgp-chart-filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .tgp-frontend-chart-container {
+        height: 300px;
+    }
+    
+    .tgp-roi-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tgp-keywords-summary {
+        gap: 30px;
+    }
+    
+    .tgp-summary-number {
+        font-size: 36px;
+    }
+}
+

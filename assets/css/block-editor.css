@@ -1,0 +1,83 @@
+/* Gutenberg Block Editor Styles */
+
+.tgp-block-editor {
+    background: #f8f9fa;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 200px;
+}
+
+.tgp-block-preview {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tgp-block-preview-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.tgp-block-icon {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.tgp-block-preview-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.tgp-block-preview-content p {
+    margin: 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.tgp-block-preview-info {
+    padding: 25px;
+}
+
+.tgp-block-preview-info p {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.tgp-block-preview-info p:last-child {
+    margin-bottom: 0;
+}
+
+.tgp-block-preview-note {
+    color: #666 !important;
+    font-style: italic;
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 15px !important;
+}
+
+/* Placeholder styles */
+.tgp-block-placeholder {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: #856404;
+    font-weight: 600;
+}
+
+/* Inspector Controls */
+.components-panel__body-title button {
+    font-weight: 600;
+}
+
