@@ -33,6 +33,22 @@ require_once TGP_PLUGIN_DIR . 'includes/class-tgp-importer.php';
 require_once TGP_PLUGIN_DIR . 'includes/class-tgp-frontend.php';
 require_once TGP_PLUGIN_DIR . 'includes/class-tgp-blocks.php';
 
+// Initialize Plugin Update Checker
+require_once TGP_PLUGIN_DIR . 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$tgpUpdateChecker = PucFactory::buildUpdateChecker(
+    'https://github.com/markfenske84/traffic-growth-projection',
+    __FILE__,
+    'traffic-growth-projection'
+);
+
+// Optional: Set the branch to check for updates (default is 'main')
+$tgpUpdateChecker->setBranch('main');
+
+// Optional: If using private repository, uncomment and add your token:
+// $tgpUpdateChecker->setAuthentication('your-github-token-here');
+
 /**
  * Main plugin class
  */
