@@ -637,7 +637,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         const month = parseInt(document.getElementById('tgp-roi-month').value);
-        const investment = parseFloat(document.getElementById('tgp-roi-investment').value);
+        const monthlyInvestment = parseFloat(document.getElementById('tgp-roi-investment').value);
+        
+        // Calculate total investment (monthly investment * number of months)
+        const totalInvestment = monthlyInvestment * month;
         
         // Get traffic for selected month
         let traffic = 0;
@@ -652,7 +655,7 @@ document.addEventListener('DOMContentLoaded', function() {
         formData.append('conversion_rate_low', tgpProjectData.conversion_rate_low);
         formData.append('conversion_rate_high', tgpProjectData.conversion_rate_high);
         formData.append('cltv', tgpProjectData.cltv);
-        formData.append('investment', investment);
+        formData.append('investment', totalInvestment);
         
         fetch(tgpAjax.ajaxurl, {
             method: 'POST',
@@ -676,9 +679,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('tgp-roi-revenue').textContent = 
             '$' + roi.revenue_low.toLocaleString() + ' - $' + roi.revenue_high.toLocaleString();
         
-        // Format ROI as multiplier (1x - 10x+)
-        let roiLowText = roi.roi_low >= 10 ? '10x+' : roi.roi_low.toFixed(1) + 'x';
-        let roiHighText = roi.roi_high >= 10 ? '10x+' : roi.roi_high.toFixed(1) + 'x';
+        // Format ROI as multiplier
+        let roiLowText = roi.roi_low.toFixed(1) + 'x';
+        let roiHighText = roi.roi_high.toFixed(1) + 'x';
         
         document.getElementById('tgp-roi-percentage').textContent = roiLowText + ' - ' + roiHighText;
         

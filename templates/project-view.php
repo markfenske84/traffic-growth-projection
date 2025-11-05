@@ -104,7 +104,7 @@ if (!defined('ABSPATH')) {
                 </select>
             </div>
             <div class="tgp-form-group">
-                <label for="tgp-roi-investment">Investment Amount ($)</label>
+                <label for="tgp-roi-investment">Monthly Investment ($)</label>
                 <input type="number" id="tgp-roi-investment" class="widefat" step="0.01" min="0" value="0">
             </div>
             <div class="tgp-form-group">
