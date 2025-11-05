@@ -3,7 +3,7 @@
  * Plugin Name: Traffic Growth Projection
  * Plugin URI: https://wordpress.org/plugins/traffic-growth-projection
  * Description: A comprehensive tool for projecting keyword-based traffic growth, ROI calculations, and conversion tracking.
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: Webfor Agency
  * Author URI: https://profiles.wordpress.org/webforagency
  * License: GPL v2 or later
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('TGP_VERSION', '1.0.3');
+define('TGP_VERSION', '1.0.4');
 define('TGP_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('TGP_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('TGP_PLUGIN_FILE', __FILE__);

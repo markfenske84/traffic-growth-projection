@@ -4,7 +4,7 @@ Tags: seo, traffic, keywords, analytics, roi
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,14 @@ Traffic is calculated based on the ranking position and estimated traffic for ea
 
 == Changelog ==
 
+= 1.0.4 =
+* Fixed ROI calculator to show actual multiplier values instead of capping at 10x+
+* Fixed ROI calculation to properly account for monthly investment across selected timeframe
+* Updated investment field label to clarify it's a monthly amount
+
+= 1.0.3 =
+* Internal improvements and bug fixes
+
 = 1.0.2 =
 * Improved shortcode display on projects page
 * Removed redundant shortcode display from project detail page
@@ -114,6 +122,9 @@ Traffic is calculated based on the ranking position and estimated traffic for ea
 * Export functionality
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+Important fix: ROI calculator now properly calculates and displays ROI values. Recommended update for all users.
 
 = 1.0.2 =
 Minor UI improvements. Shortcode display now only on projects page.
